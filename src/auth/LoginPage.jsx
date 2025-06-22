@@ -15,6 +15,7 @@ import {
 import { supabase } from '../supabaseClient';
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -114,7 +115,7 @@ export default function LoginPage() {
 
       <VStack spacing={4}>
         <FormControl isRequired>
-          <FormLabel>Email</FormLabel>
+          <FormLabel color="gray.500">Email</FormLabel>
           <Input
             placeholder="Email"
             value={email}
@@ -123,7 +124,7 @@ export default function LoginPage() {
         </FormControl>
 
         <FormControl isRequired>
-          <FormLabel>Password</FormLabel>
+          <FormLabel color="gray.500">Password</FormLabel>
           <Input
             type="password"
             placeholder="Password"
@@ -187,6 +188,7 @@ export default function LoginPage() {
         </Text>
       </VStack>
     </Box>
+    <Footer />
     </Box>
   );
 }

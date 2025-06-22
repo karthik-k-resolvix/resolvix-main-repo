@@ -7,6 +7,7 @@ import {
   FaHistory, FaFlag, FaEnvelope, FaRobot
 } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import Footer from './components/Footer';
 
 export default function ResolvixHomepage() {
    const navigate = useNavigate();
@@ -135,23 +136,7 @@ export default function ResolvixHomepage() {
   <Text fontWeight="bold" fontSize="md">Email</Text>
   <Text color="brand.textSecondary">karthik.k@resolvix.tech</Text>
 </Box>
-
-{/* Footer */}
-<Flex
-  direction={{ base: "column", md: "row" }}
-  justify="space-between"
-  align="center"
-  px={6}
-  py={6}
-  bg="white"
-  color="gray.600"
-  fontSize="sm"
->
-  <Text>&copy; 2025 Resolvix - All Rights Reserved.</Text>
-  <Text textDecor="underline" mt={{ base: 2, md: 0 }}>PRIVACY POLICY</Text>
-
-</Flex>
-
+<Footer />
     </Box>
   );
 }
