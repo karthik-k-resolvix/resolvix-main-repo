@@ -47,7 +47,7 @@ export default function LoginPage() {
       return;
     }
     const token = response.credential;
-    const decoded = jwtDecode(token);
+    // const decoded = jwtDecode(token);
     localStorage.setItem("google_token", token);
     navigate('/register');
   };

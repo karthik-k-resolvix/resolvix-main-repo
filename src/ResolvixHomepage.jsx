@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-  Box, Flex, Heading, Text, Button, Stack, SimpleGrid, VStack, HStack, Icon,
+  Box, Flex, Heading, Text, Button, SimpleGrid, VStack, HStack, Icon,
 } from '@chakra-ui/react';
 import {
   FaUsers, FaExclamationTriangle, FaCommentDots, FaBrain,
   FaHistory, FaFlag, FaEnvelope, FaRobot
 } from 'react-icons/fa';
-import { Image } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 export default function ResolvixHomepage() {

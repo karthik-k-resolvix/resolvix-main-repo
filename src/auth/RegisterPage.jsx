@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthProvider';
-import { VStack, Input, Button, Text, Heading } from '@chakra-ui/react';
+import { VStack, Input, Button, Heading } from '@chakra-ui/react';
 
 export default function RegisterPage() {
   const { user } = useAuth();
