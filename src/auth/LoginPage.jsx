@@ -10,16 +10,8 @@ import {
   FormControl,
   FormLabel,
   Image,
-  Stack,
-  SimpleGrid,
-  Icon,
-  Flex,
-  HStack
+  Flex
 } from '@chakra-ui/react';
-import {
-  FaUsers, FaExclamationTriangle, FaCommentDots, FaBrain,
-  FaHistory, FaFlag, FaEnvelope, FaRobot
-} from 'react-icons/fa';
 import { supabase } from '../supabaseClient';
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
