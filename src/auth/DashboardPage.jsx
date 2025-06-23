@@ -23,7 +23,8 @@ import { supabase } from '../supabaseClient';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
-
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 export default function DashboardPage() {
@@ -169,10 +170,11 @@ export default function DashboardPage() {
   if (!userData || loading) return <Text>Loading dashboard...</Text>;
 
   return (
+    <div>
+      <Header/>
     <VStack spacing={6} px={6} py={8} align="stretch" bg={boxBg} color={textColor}>
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Text fontSize="3xl" fontWeight="bold">Profile and Analytics</Text>
-        <Button onClick={logout} colorScheme="red">Logout</Button>
       </Box>
 
       <Text fontSize="xl" fontWeight="semibold">User Details</Text>
@@ -231,6 +233,9 @@ export default function DashboardPage() {
         <Button onClick={handleDownloadPDF} colorScheme="blue">Download PDF</Button>
         <Button onClick={handleDownloadExcel} colorScheme="purple">Download Excel</Button>
       </Box>
+      
     </VStack>
+<Footer/>    
+</div>
   );
 }

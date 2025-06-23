@@ -11,6 +11,7 @@ import { supabase } from '../supabaseClient';
 import PrivacyPolicyContent from '../components/PrivacyPolicyContent';
 
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 export default function RegisterPage() {
   const { user } = useAuth();
@@ -74,9 +75,12 @@ export default function RegisterPage() {
   };
 
   return (
-    <Box maxW="600px" mx="auto" mt={10} p={6} bg="white" borderRadius="lg" boxShadow="md">
+    <div>
+      <Box bg='brand.bgSecondary'  >
+      <Header/>
+    <Box maxW="600px" mx="auto" mt={10} p={6} bg="white" borderRadius="lg" boxShadow="md" >
       <Heading fontSize="2xl" mb={4} color="brand.purple">Brand Registration</Heading>
-      <form onSubmit={handleSubmit}>
+      <form maxH="90%" onSubmit={handleSubmit}>
         <VStack spacing={4} align="stretch">
           <FormControl isRequired>
             <FormLabel>Full Name</FormLabel>
@@ -161,7 +165,10 @@ export default function RegisterPage() {
           </ModalBody>
         </ModalContent>
       </Modal>
-      <Footer />
+      
     </Box>
+    </Box>
+    <Footer />
+    </div>
   );
 }

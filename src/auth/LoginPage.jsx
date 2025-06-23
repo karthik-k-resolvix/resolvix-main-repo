@@ -84,11 +84,12 @@ export default function LoginPage() {
     <Box
       maxW="lg"
       mx="auto"
-      mt={20}
+      mt={5}
       p={8}
       borderRadius="lg"
       bg="white"
       boxShadow="lg"
+      marginBottom={10}
     >
       <Heading
         textAlign="center"
@@ -188,6 +189,7 @@ export default function LoginPage() {
         </Text>
       </VStack>
     </Box>
+    
     <Footer />
     </Box>
   );

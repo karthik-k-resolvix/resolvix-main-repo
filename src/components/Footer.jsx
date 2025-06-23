@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React, { useState } from 'react';
-import { Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Button, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Button, ListItem, UnorderedList } from '@chakra-ui/react';
 import PrivacyPolicyContent from './PrivacyPolicyContent';
 
 export default function Footer() {
@@ -26,10 +26,12 @@ export default function Footer() {
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl" scrollBehavior="inside">
         <ModalOverlay />
-        <ModalContent maxH="90vh" overflowY="auto">
+        <ModalContent maxH="90vh" overflowY="auto" >
           <ModalHeader>Privacy Policy</ModalHeader>
           <ModalCloseButton />
-         <PrivacyPolicyContent/>
+          <Box mx={10} marginBottom={10}>
+         <PrivacyPolicyContent />
+         </Box>
         </ModalContent>
       </Modal>
     </>
