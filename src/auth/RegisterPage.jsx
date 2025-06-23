@@ -10,6 +10,8 @@ import { useAuth } from '../auth/AuthProvider';
 import { supabase } from '../supabaseClient';
 import PrivacyPolicyContent from '../components/PrivacyPolicyContent';
 
+import Footer from '../components/Footer';
+
 export default function RegisterPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -159,6 +161,7 @@ export default function RegisterPage() {
           </ModalBody>
         </ModalContent>
       </Modal>
+      <Footer />
     </Box>
   );
 }
